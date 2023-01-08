@@ -12,6 +12,8 @@ int main(){
     getword(func);
     if (func[0] == 'a')
     {
+        char line[LINE];
+        getLine(line);
         printifcontains(word);
     }
         if (func[0] == 'b')
