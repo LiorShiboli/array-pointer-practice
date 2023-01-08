@@ -5,6 +5,7 @@
 #define WORD 30
 #define CHANGES 1
 int getLine(char s[]){
+
     char line[LINE];
     char letter;
     int i=0;
@@ -14,6 +15,7 @@ int getLine(char s[]){
         i++;
     }
     line[i]='\0';
+    printf("%s",line);
     return i;
 
 }
@@ -29,6 +31,7 @@ int getword(char s[]){
         i++;
     }
     word[i]='\0';
+    printf("%s",word);
     return i;
 
 }
