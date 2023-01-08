@@ -3,20 +3,20 @@ FLAGS = -Wall -g
 all:isort txtfind
 
 isort:main-isort.o insertion.o
-	$(CC) $(FLAGS) -o isort main-isort.o insertion.o
+	$(CC) $(FLAGS)  -o isort main-isort.o insertion.o
 insertion: insertion.c insertion.h
-	$(CC) $(FLAGS) -valgrind -c insertion.c
+	$(CC) $(FLAGS) -valgrind  --leak-check=yes -c insertion.c
 main-isort: main-isort.c insertion.h
-	$(CC) $(FLAGS) -valgrind -c main-isort.c
+	$(CC) $(FLAGS) -valgrind  --leak-check=yes -c main-isort.c
 
 txtfind:main-txtfind.o txtfunc.o
 	$(CC) $(FLAGS) -o txtfind main-txtfind.o txtfunc.o
 txtfunc: txtfunc.c txtfunc.h
-	$(CC) $(FLAGS) -valgrind -c txtfunc.c
+	$(CC) $(FLAGS) -valgrind  --leak-check=yes -c txtfunc.c
 
 
 main-txtfunc: main-txtfind.c txtfind.h
-	$(CC) $(FLAGS) -valgrind -c main-txtfind.c
+	$(CC) $(FLAGS) -valgrind  --leak-check=yes -c main-txtfind.c
 
 
 
