@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "insertion.h"
-#define LENGTH 5
+#define LENGTH 50
 int main(){
     int num = 0;
     int arr[LENGTH];
