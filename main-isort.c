@@ -14,6 +14,6 @@ int main(){
     {
         printf("%d,",*(arr+i));
     }
-    printf("%d",*(arr+LENGTH-1));
+    printf("%d\n",*(arr+LENGTH-1));
     return 0;
 }
