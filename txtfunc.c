@@ -22,6 +22,7 @@ int getword(char s[]){
     char letter;
 
     int i=0;
+
     while (scanf("%c",&letter)&& letter!='\n'&&letter!=' '&&letter!='\t')
     {
         word[i]=letter;
@@ -57,7 +58,7 @@ void printifcontains(char s[]){
         wordstart++;
 
     }
-    printf("%s",line);
+    printf("%s \n",line);
     }
 
 }

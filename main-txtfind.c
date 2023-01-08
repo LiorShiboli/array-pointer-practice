@@ -13,9 +13,6 @@ int main(){
     if (func[0] == 'a')
     {
         printifcontains(word);
-
-
-
     }
         if (func[0] == 'b')
     {
