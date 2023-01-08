@@ -5,33 +5,28 @@
 #define WORD 30
 #define CHANGES 1
 int getLine(char s[]){
-
-    char line[LINE];
     char letter;
     int i=0;
     while (scanf("%c",&letter)&& letter!='\n')
     {
-        line[i]=letter;
+        s[i]=letter;
         i++;
     }
-    line[i]='\0';
-    printf("%s",line);
+    s[i]='\0';
     return i;
 
 }
 int getword(char s[]){
-    char word[WORD];
     char letter;
 
     int i=0;
 
     while (scanf("%c",&letter)&& letter!='\n'&&letter!=' '&&letter!='\t')
     {
-        word[i]=letter;
+        s[i]=letter;
         i++;
     }
-    word[i]='\0';
-    printf("%s",word);
+    s[i]='\0';
     return i;
 
 }
@@ -61,7 +56,10 @@ void printifcontains(char s[]){
         wordstart++;
 
     }
-    printf("%s \n",line);
+    if (doescontain)
+    {
+        printf("%s \n",line);
+    }
     }
 
 }
@@ -70,7 +68,8 @@ char word[WORD];
 int lenword=0,lens = strlen(s);
     while (lenword=getword(word))
     {
-        if (lenword + CHANGES<=lenword )
+
+        if (lenword - CHANGES <=lens )
         {
             char *wordstart = word,*wordindex = s;
             int doescontain = 0, i=0 ;
@@ -86,7 +85,12 @@ int lenword=0,lens = strlen(s);
                 }
                wordstart++;
             }
-        printf("%s",word);
+        if (doescontain)
+        {
+            printf("%s\n",word);
+        }
+
+
         }
     }
 

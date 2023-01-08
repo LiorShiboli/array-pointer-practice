@@ -9,18 +9,18 @@
 int main(){
     char word[WORD],  func[FUNCID+1] ;
     getword(word);
-    printf("%s",word);
     getword(func);
-    printf("%s",func);
     if (func[0] == 'a')
     {
+
         char line[LINE];
         getLine(line);
         printifcontains(word);
     }
-        if (func[0] == 'b')
+    if (func[0] == 'b')
     {
-
+        char line[LINE];
+        getLine(line);
         printsimiliarwords(word);
     }
 
